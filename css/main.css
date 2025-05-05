@@ -624,6 +624,8 @@
 }
 
 .footer__social img {
+    height: 1.5rem;
+    width: auto;
     transition: opacity 0.2s ease;
 }
 

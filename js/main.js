@@ -321,9 +321,9 @@ document.addEventListener('DOMContentLoaded', () => {
             }
 
             // Keyboard Controls for Carousel
-            document.addEventListener('keydown', (event) => {
+            document.addEventListener('keydown', event => {
                 if (event.target.closest('.carousel__container')) {
-                    switch(event.key) {
+                    switch (event.key) {
                         case 'ArrowRight':
                             currentSlide = (currentSlide + 1) % slides.length;
                             scrollToSlide(currentSlide);
@@ -581,9 +581,102 @@ document.addEventListener('DOMContentLoaded', () => {
     };
 
     // Initialize all components
+    // Footer generation functionality
+    const footerGeneration = {
+        socialMediaLinks: [
+            {
+                platform: 'LinkedIn',
+                url: 'https://www.linkedin.com/in/luk-dewulf-7b19935/',
+                icon: '../img/some_icons/linkedin.svg',
+                alt: 'LinkedIn link',
+                target: '_blank',
+            },
+            {
+                platform: 'X',
+                url: 'https://x.com/Dewulfluk',
+                icon: '../img/some_icons/x.svg',
+                alt: 'X profiel',
+            },
+            {
+                platform: 'YouTube',
+                url: 'http://www.youtube.com/@DewulfLuk',
+                icon: '../img/some_icons/youtube.svg',
+                alt: 'YouTube link',
+            },
+            {
+                platform: 'Instagram',
+                url: 'https://www.instagram.com/dewulfluk/',
+                icon: '../img/some_icons/instagram.svg',
+                alt: 'Instagram link',
+            },
+            {
+                platform: 'TikTok',
+                url: 'https://www.tiktok.com/@luk.dewulf4',
+                icon: '../img/some_icons/tiktok.svg',
+                alt: 'TikTok link',
+            },
+        ],
+
+        init: function () {
+            this.generateProjectPageFooter();
+        },
+
+        generateProjectPageFooter: function () {
+            // Check if we're on a project page and footer doesn't exist
+            if (document.querySelector('.project__main') && !document.querySelector('.footer')) {
+                const footer = document.createElement('footer');
+                footer.className = 'footer';
+                footer.setAttribute('role', 'contentinfo');
+
+                // Generate footer HTML dynamically
+                footer.innerHTML = `
+                    <div class="footer__container">
+                        <div class="footer__info">
+                            <h2 class="visually-hidden">Contact informatie</h2>
+                            <p>Contact</p>
+                            <p>
+                                <svg class="footer__icon" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M2.01394 6.87134C1.34749 10.0618 3.85967 13.8597 7.01471 17.0147C10.1698 20.1698 13.9676 22.682 17.1581 22.0155C19.782 21.4674 21.1215 20.0697 21.8754 18.8788C22.1355 18.4678 22.0042 17.9344 21.6143 17.6436L17.9224 14.8897C17.5243 14.5928 16.9685 14.633 16.6174 14.9842L14.6577 16.9438C14.6577 16.9438 12.7529 16.3246 10.2288 13.8006C7.70482 11.2766 7.08564 9.37175 7.08564 9.37175L9.04529 7.4121C9.39648 7.06091 9.43671 6.5052 9.13975 6.10709L6.38585 2.4151C6.09505 2.02525 5.56163 1.89395 5.15068 2.15407C3.9597 2.90794 2.56203 4.24747 2.01394 6.87134Z" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" />
+                                </svg>
+                                <a href="tel:+32477616997">+32 (0)477/61.69.97</a> &nbsp; &#124; &nbsp;
+                                <svg class="footer__icon" viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg">
+                                    <path class="cls-1" d="M6.47,10.71a2,2,0,0,0-2,2h0V35.32a2,2,0,0,0,2,2H41.53a2,2,0,0,0,2-2h0V12.68a2,2,0,0,0-2-2H6.47Zm33.21,3.82L24,26.07,8.32,14.53" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" />
+                                </svg>
+                                <a href="mailto:info@deseizoenen.be" target="_top">info&#64;deseizoenen.be</a>
+                            </p>
+                            <p>&copy; De Seizoenen <span id="current_year"></span></p>
+                        </div>
+                        <div class="footer__social">
+                            <h2 class="visually-hidden">Sociale media</h2>
+                            <p>Follow us</p>
+                            <div class="footer__social-icons">
+                                ${this.socialMediaLinks
+                                    .map(
+                                        link => `
+                                    <a class="footer__social-link" href="${link.url}" ${link.target ? `target="${link.target}"` : ''}>
+                                        <img src="${link.icon}" alt="${link.alt}" loading="lazy" />
+                                    </a>
+                                `
+                                    )
+                                    .join('')}
+                            </div>
+                        </div>
+                    </div>
+                `;
+
+                // Append footer after the main content
+                document.querySelector('.project__main').insertAdjacentElement('afterend', footer);
+
+                // Update copyright year
+                core.updateCopyrightYear();
+            }
+        },
+    };
+
     core.init();
     navigation.init();
     homePage.init();
     projectPage.init();
+    footerGeneration.init();
     animateOnScroll();
 });
