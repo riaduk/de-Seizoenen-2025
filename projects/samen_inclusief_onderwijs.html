@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="nl">
+    <head>
+        <meta charset="utf-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <meta name="description" content="SAMen inclusief onderwijs - Een mini-documentaire over inclusief onderwijs met Sam Diependaele in de hoofdrol, geproduceerd door De Seizoenen." />
+        <meta name="theme-color" content="#000000" />
+
+        <!-- Fonts -->
+        <link rel="stylesheet" href="https://use.typekit.net/rjr6ycb.css" />
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link href="https://fonts.googleapis.com/css2?family=Noto+Sans:wdth,wght@62.5..100,100..900&display=swap" rel="stylesheet" />
+
+        <title>De Seizoenen - SAMen inclusief onderwijs</title>
+
+        <!-- Favicon -->
+        <link rel="icon" type="image/png" href="../img/logos/deSeizoenen-logo-single.png" />
+
+        <!-- Stylesheet -->
+        <link rel="stylesheet" type="text/css" href="../css/style.css" />
+    </head>
+
+    <body>
+        <!-- Skip to main content link -->
+        <a href="#main-content" class="skip-link">Skip to main content</a>
+
+        <nav class="navbar" role="navigation" aria-label="Hoofdnavigatie">
+            <div class="navbar__container">
+                <div class="navbar__header">
+                    <a href="../index.html" aria-label="Ga naar homepage">
+                        <img class="navbar__logo" src="../img/logos/deSeizoenen-logo-black.svg" alt="Logo van De Seizoenen" width="200" height="50" loading="lazy" />
+                    </a>
+                    <button class="navbar__toggle" aria-label="Menu openen/sluiten" aria-expanded="false" aria-controls="navbar-menu">
+                        <span class="navbar__toggle-bar"></span>
+                        <span class="navbar__toggle-bar"></span>
+                        <span class="navbar__toggle-bar"></span>
+                    </button>
+                </div>
+                <div class="navbar__menu" id="navbar-menu">
+                    <ul class="navbar__list">
+                        <li class="navbar__item"><a href="../index.html" class="navbar__link">Home</a></li>
+                        <li class="navbar__item navbar__item--has-children">
+                            <a href="#" class="navbar__link navbar__link--with-caret" aria-expanded="false" aria-controls="projects-dropdown">
+                                Projecten
+                                <span class="navbar__caret" aria-hidden="true"></span>
+                            </a>
+                            <ul class="navbar__dropdown" id="projects-dropdown" role="menu">
+                                <!-- Dropdown will be populated dynamically via JavaScript -->
+                            </ul>
+                        </li>
+                        <li class="navbar__item"><a href="../about.html" class="navbar__link">Over ons</a></li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+
+        <!-- SAMen inclusief onderwijs -->
+        <main id="main-content" class="project__container" role="main">
+            <button class="project__btn" aria-label="Project weergave wisselen"></button>
+            <div class="project__intro" role="region" aria-label="Project introductie">
+                <div class="project__intro-column">
+                    <h1 class="project__title">SAMen inclusief onderwijs</h1>
+                    <p class="project__description">Inclusie voor kinderen met een beperking is een uitdaging voor ouders en kinderen. Deze mini-docu, met Sam Diependaele (13) in de hoofdrol, focust op onderwijs. De video SAMen dansen met CEMI focust op vrije tijd.</p>
+                    <div class="project__description-container">
+                        <a class="project__description-link" href="projects/samen_dansen_met_cemi.html">Ontdek hem hier, net als duizenden anderen</a>
+                        <span class="project__description-btn"></span>
+                    </div>
+                </div>
+                <div class="project__intro-column">
+                    <h2 class="project__subtitle">Persoonlijk verhaal</h2>
+                    <p class="project__description">
+                        Om een video te maken die de effectieve ondersteuning van een inclusief traject illustreert, staken we de hoofden bij elkaar. We selecteerden, samen met experten, de elementen die belangrijk zijn voor een inclusietraject. Dan zochten we naar de juiste persoon om dat traject te concretiseren in een tastbaar verhaal. Na een
+                        analyse van verschillende cases kwamen we uit op het verhaal van Sam Diependaele (13). Sam heeft het syndroom van Down en loopt school in het OLVC in Zottegem, een school die bewust kiest voor inclusief onderwijs.
+                    </p>
+                </div>
+            </div>
+            <div class="project__image">
+                <img src="../img/projects/intro/samen_inclusief_onderwijs.webp" alt="Sam Diependaele in de klas tijdens inclusief onderwijs" loading="lazy" />
+            </div>
+            <iframe
+                class="project__video"
+                src="https://www.youtube.com/embed/ehW4C99celI?si=LLyzoB9jOtFTf3lp"
+                title="Mini-documentaire SAMen inclusief onderwijs met Sam Diependaele"
+                frameborder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                referrerpolicy="strict-origin-when-cross-origin"
+                allowfullscreen
+            ></iframe>
+        </main>
+
+        <!-- Footer -->
+        <footer class="footer" role="contentinfo">
+            <div class="footer__container">
+                <div class="footer__info">
+                    <h2 class="visually-hidden">Contact informatie</h2>
+                    <p>Contact</p>
+                    <p>
+                        <svg class="footer__icon" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false">
+                            <path
+                                d="M2.01394 6.87134C1.34749 10.0618 3.85967 13.8597 7.01471 17.0147C10.1698 20.1698 13.9676 22.682 17.1581 22.0155C19.782 21.4674 21.1215 20.0697 21.8754 18.8788C22.1355 18.4678 22.0042 17.9344 21.6143 17.6436L17.9224 14.8897C17.5243 14.5928 16.9685 14.633 16.6174 14.9842L14.6577 16.9438C14.6577 16.9438 12.7529 16.3246 10.2288 13.8006C7.70482 11.2766 7.08564 9.37175 7.08564 9.37175L9.04529 7.4121C9.39648 7.06091 9.43671 6.5052 9.13975 6.10709L6.38585 2.4151C6.09505 2.02525 5.56163 1.89395 5.15068 2.15407C3.9597 2.90794 2.56203 4.24747 2.01394 6.87134Z"
+                                stroke="currentColor"
+                                stroke-linecap="round"
+                                stroke-linejoin="round"
+                            />
+                        </svg>
+                        +32 (0)477/61.69.97 &nbsp; &#124; &nbsp;
+                        <svg class="footer__icon" viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false">
+                            <path class="cls-1" d="M6.47,10.71a2,2,0,0,0-2,2h0V35.32a2,2,0,0,0,2,2H41.53a2,2,0,0,0,2-2h0V12.68a2,2,0,0,0-2-2H6.47Zm33.21,3.82L24,26.07,8.32,14.53" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" />
+                        </svg>
+                        <a href="mailto:info@deseizoenen.be" target="_top">info&#64;deseizoenen.be</a>
+                    </p>
+                    <p>&copy; De Seizoenen <span id="current_year"></span></p>
+                </div>
+                <div class="footer__social">
+                    <h2 class="visually-hidden">Sociale media</h2>
+                    <p>Volg ons</p>
+                    <div class="footer__social-icons">
+                        <a class="footer__social-link" href="https://www.linkedin.com/in/luk-dewulf-7b19935/" target="_blank" rel="noopener noreferrer">
+                            <img src="../img/some_icons/linkedin.svg" alt="LinkedIn profiel" width="24" height="24" loading="lazy" />
+                        </a>
+                        <a class="footer__social-link" href="https://x.com/Dewulfluk" rel="noopener noreferrer">
+                            <img src="../img/some_icons/x.svg" alt="X profiel" width="24" height="24" loading="lazy" />
+                        </a>
+                        <a class="footer__social-link" href="http://www.youtube.com/@DewulfLuk" rel="noopener noreferrer">
+                            <img src="../img/some_icons/youtube.svg" alt="YouTube kanaal" width="24" height="24" loading="lazy" />
+                        </a>
+                        <a class="footer__social-link" href="https://www.instagram.com/dewulfluk/" rel="noopener noreferrer">
+                            <img src="../img/some_icons/instagram.svg" alt="Instagram profiel" width="24" height="24" loading="lazy" />
+                        </a>
+                        <a class="footer__social-link" href="https://www.tiktok.com/@luk.dewulf4" rel="noopener noreferrer">
+                            <img src="../img/some_icons/tiktok.svg" alt="TikTok profiel" width="24" height="24" loading="lazy" />
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </footer>
+
+        <!-- Scripts -->
+        <script type="text/javascript" src="../js/main.js"></script>
+        <script type="text/javascript" src="../js/accessibility.js"></script>
+    </body>
+</html>

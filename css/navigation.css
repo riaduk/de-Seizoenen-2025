@@ -1,0 +1,136 @@
+@charset "utf-8";
+
+/* Navigation Styles ------------------------------------*/
+.navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: rgba(var(--color-white), 0.8);
+    box-shadow: 0 0.125rem 0.25rem rgba(0, 0, 0, 0.1);
+    z-index: 2000;
+}
+
+.navbar__container {
+    max-width: 100%;
+    margin: 0 auto;
+    padding: 1rem 2rem;
+}
+
+.navbar__header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.navbar__logo {
+    height: 2.5rem;
+    width: auto;
+}
+
+/* Show hamburger at all screen sizes */
+.navbar__toggle {
+    display: block;
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 0.5rem;
+    z-index: 1001;
+}
+
+.navbar__toggle-bar {
+    display: block;
+    width: 1.5rem;
+    height: 0.125rem;
+    background-color: var(--color-black);
+    transition: transform 0.3s ease-in-out;
+}
+
+.navbar__toggle-bar + .navbar__toggle-bar {
+    margin-top: 0.25rem;
+}
+
+/* Menu is hidden by default */
+.navbar__menu {
+    display: none;
+    background-color: rgba(var(--color-white), 0.8);
+}
+
+.navbar__menu.is-active {
+    display: block;
+    background-color: rgba(var(--color-white), 0.8);
+}
+
+.navbar__list {
+    list-style: none;
+    margin: 0;
+    padding: 0.5rem 1rem;
+}
+
+.navbar__item {
+    position: relative;
+}
+
+.navbar__link {
+    display: flex;
+    align-items: center;
+    color: var(--color-black);
+    text-decoration: none;
+    font-size: 1rem;
+    padding: 0.5rem 1rem;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.navbar__link:hover {
+    background-color: var(--color-dark-grey);
+    color: rgb(var(--color-white));
+}
+
+.navbar__caret {
+    display: inline-block;
+    width: 0.5rem;
+    height: 0.5rem;
+    margin-left: 0.5rem;
+    border-right: 0.125rem solid currentColor;
+    border-bottom: 0.125rem solid currentColor;
+    transform: rotate(-45deg);
+    transition: transform 0.3s ease;
+}
+
+.navbar__dropdown {
+    display: none;
+    background-color: var(--color-white);
+    box-shadow: 0 0.25rem 0.5rem rgba(0, 0, 0, 0.1);
+    padding: 0.5rem 0;
+}
+
+.navbar__dropdown-item {
+    display: block;
+}
+
+.navbar__dropdown-item .navbar__link {
+    padding: 0.5rem 1rem;
+}
+
+/* Show dropdown when parent is active */
+.navbar__item--has-children.is-active > .navbar__dropdown {
+    display: block;
+}
+
+/* Hamburger to X animation - applies at all screen sizes */
+.navbar__toggle.is-active .navbar__toggle-bar:nth-child(1) {
+    transform: translateY(0.375rem) rotate(45deg);
+}
+
+.navbar__toggle.is-active .navbar__toggle-bar:nth-child(2) {
+    opacity: 0;
+}
+
+.navbar__toggle.is-active .navbar__toggle-bar:nth-child(3) {
+    transform: translateY(-0.375rem) rotate(-45deg);
+}
+
+/* Rotate caret when active - applies at all screen sizes */
+.navbar__item--has-children.is-active .navbar__caret {
+    transform: rotate(45deg);
+}
