@@ -596,24 +596,28 @@ document.addEventListener('DOMContentLoaded', () => {
                 url: 'https://x.com/Dewulfluk',
                 icon: '../img/some_icons/x.svg',
                 alt: 'X profiel',
+                target: '_blank',
             },
             {
                 platform: 'YouTube',
                 url: 'http://www.youtube.com/@DewulfLuk',
                 icon: '../img/some_icons/youtube.svg',
                 alt: 'YouTube link',
+                target: '_blank',
             },
             {
                 platform: 'Instagram',
                 url: 'https://www.instagram.com/dewulfluk/',
                 icon: '../img/some_icons/instagram.svg',
                 alt: 'Instagram link',
+                target: '_blank',
             },
             {
                 platform: 'TikTok',
                 url: 'https://www.tiktok.com/@luk.dewulf4',
                 icon: '../img/some_icons/tiktok.svg',
                 alt: 'TikTok link',
+                target: '_blank',
             },
         ],
 

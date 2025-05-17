@@ -264,8 +264,8 @@
     font-style: italic;
 }
 
-.hero__button {
-    display: block;
+.hero__anchor {
+    display: inline-block;
     margin: 0 auto;
     padding: 1rem 2rem;
     font-size: 1.5rem;
@@ -288,18 +288,18 @@
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
-.hero__button:hover {
+.hero__anchor:hover {
     transform: translateY(-2px);
     box-shadow: 0 6px 8px rgba(0, 0, 0, 0.2);
     color: var(--color-accent-green);
 }
 
-.hero__button:focus {
+.hero__anchor:focus {
     outline: none;
     box-shadow: 0 0 0 3px rgba(var(--color-accent), 0.5), 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
-.hero__button:active {
+.hero__anchor:active {
     transform: translateY(0);
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
@@ -460,6 +460,7 @@
 .about__main__intro {
     background-color: var(--color-black);
     padding: 5rem 10% 2rem;
+    width: 100%;
 }
 
 .about__main__content {
