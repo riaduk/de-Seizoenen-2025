@@ -485,7 +485,7 @@
     line-height: 0.8;
     font-weight: 600;
     text-transform: uppercase;
-    animation: fadeInUp 1.5s ease-out forwards;
+    animation: fadeInUp 1.5s ease-out forwards 1.5s;
 }
 
 .about__main__title {
@@ -503,7 +503,7 @@
     flex-direction: row;
     justify-content: space-evenly;
     opacity: 0;
-    animation: fadeInUp 1.5s ease-out forwards;
+    animation: fadeInUp 1.5s ease-out forwards 1.5s;
     animation-play-state: paused;
 }
 
@@ -528,7 +528,7 @@
     margin: 5rem 0 2rem;
     letter-spacing: 0.1em;
     opacity: 0;
-    animation: fadeInUp 1.5s ease-out forwards;
+    animation: fadeInUp 1.5s ease-out forwards 1.5s;
     animation-play-state: paused;
 }
 
@@ -557,8 +557,7 @@
 }
 
 .about__main__video {
-    width: 100%;
-    max-width: 70%;
+    width: 95%;
     aspect-ratio: 16/9;
     border-radius: 0.25rem;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
