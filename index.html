@@ -60,7 +60,14 @@
         <header class="header" role="banner">
             <div class="carousel__container" role="region" aria-label="Project showcase carousel" aria-live="polite">
                 <div class="carousel__container__video" aria-current="true">
-                    <video src="video/carousel-intro.mp4" autoplay loop muted playsinline></video>
+                    <video
+                        src="video/carousel-intro.mp4"
+                        autoplay
+                        loop
+                        muted
+                        playsinline
+                        alt="In het logo van de Seizoenen verschijnt een 13-jarige jonge vrouw met het syndroom van Down. Ze geeft een knuffel aan influencers Celine Dept en Michiel Callebaut. Daarna wordt een 9 jarig droevig meisje in een rolstoel geduwd. Een volwassen man spreekt de kijker toe. Een volwassen blinde man zingt enthousiast terwijl hij op accordeon speelt. Een 13-jarig meisje met Downsyndroom zit aan een tafel terwijl ze uitleg geeft. Handen houden een klompvoet van een kind vast. Een puber met het syndroom van Down staat op de speelplaats. Een andere puber in een rolstoel wordt geholpen om een houten balk door te zagen. Het meisje met Down danst samen met Celine en Michiel. Een jong meisje juicht heel enthousiast, samen met haar klasgenoten."
+                    ></video>
                 </div>
                 <div class="carousel__container__video">
                     <div class="carousel__intro carousel__intro__top">
@@ -71,7 +78,7 @@
                         </p>
                         <a href="projects/mercykilling.html" class="carousel__btn" aria-label="View Mercy Killing project"></a>
                     </div>
-                    <video src="video/mercykilling-teaser.mp4" autoplay loop muted playsinline></video>
+                    <video src="video/mercykilling-teaser.mp4" autoplay loop muted playsinline alt="Handen houden een klompvoet van een kind vast. 3 mensen praten met elkaar."></video>
                 </div>
                 <div class="carousel__container__video">
                     <div class="carousel__intro carousel__intro__left">
@@ -82,7 +89,14 @@
                         </p>
                         <a href="projects/samen_dansen_met_cemi.html" class="carousel__btn" aria-label="View SAMen dansen met CEMI project"></a>
                     </div>
-                    <video src="video/SAMen_dansen_met_CEMI-teaser.mp4" autoplay loop muted playsinline></video>
+                    <video
+                        src="video/SAMen_dansen_met_CEMI-teaser.mp4"
+                        autoplay
+                        loop
+                        muted
+                        playsinline
+                        alt="Een 13-jarige jonge vrouw met het syndroom van Down opent een deur en kijkt verrast op. Ze geeft een knuffel aan influencers Celine Dept en Michiel Callebaut. De jonge vrouw met het Downsydnroom danst samen met haar zusje en Celine en Michiel in een woonkamer."
+                    ></video>
                 </div>
                 <div class="carousel__container__video">
                     <div class="carousel__intro carousel__intro__left">
@@ -93,7 +107,7 @@
                         </p>
                         <a href="projects/op_de_wachtlijst.html" class="carousel__btn" aria-label="View Op de wachtlijst project"></a>
                     </div>
-                    <video src="video/op_de_wachtlijst-teaser.mp4" autoplay loop muted playsinline></video>
+                    <video src="video/op_de_wachtlijst-teaser.mp4" autoplay loop muted playsinline alt="Een vrouw met zwarte zonnebril speelt viool. 11 enthousiaste mensen zingen en dansen op de houten brug in Boekenbergpark. 3 van hen in apenpak. Een blinde man zingt enthousiast terwijl hij musiceert op de accordeon."></video>
                 </div>
             </div>
             <button class="carousel__arrow carousel__arrow--prev" aria-label="Previous slide" aria-controls="carousel__container">
@@ -127,55 +141,118 @@
                 <div class="projects__grid" aria-label="Project showcase grid">
                     <div class="projects__slide">
                         <a href="projects/mercykilling.html">
-                            <img loading="lazy" class="projects__image" src="img/projects/teaser/mercykilling-teaser.webp" alt="Preview of Mercy Killing documentary showing..." loading="lazy" />
+                            <img
+                                class="projects__image"
+                                src="img/projects/teaser/mercykilling-teaser-800.webp"
+                                srcset="img/projects/teaser/mercykilling-teaser-400.webp 400w, img/projects/teaser/mercykilling-teaser-800.webp 800w, img/projects/teaser/mercykilling-teaser-1200.webp 1200w"
+                                sizes="(max-width: 600px) 100vw, (max-width: 1024px) 50vw, 33vw"
+                                alt="Mercy Killing. Handen houden een klompvoet van een kind vast. Explore"
+                                loading="lazy"
+                            />
                             <h4 class="projects__name">Mercy Killing</h4>
                         </a>
                     </div>
                     <div class="projects__slide">
                         <a href="projects/op_de_wachtlijst.html">
-                            <img loading="lazy" class="projects__image" src="img/projects/teaser/op_de_wachtlijst-teaser.webp" alt="Preview of Op de wachtlijst documentary showing..." loading="lazy" />
+                            <img
+                                class="projects__image"
+                                src="img/projects/teaser/op_de_wachtlijst-teaser-800.webp"
+                                srcset="img/projects/teaser/op_de_wachtlijst-teaser-400.webp 400w, img/projects/teaser/op_de_wachtlijst-teaser-800.webp 800w, img/projects/teaser/op_de_wachtlijst-teaser-1200.webp 1200w"
+                                sizes="(max-width: 600px) 100vw, (max-width: 1024px) 50vw, 33vw"
+                                alt="Op de wachtlijst. Een blinde man zingt enthousiast terwijl hij musiceert op de accordeon. Explore"
+                                loading="lazy"
+                            />
                             <h4 class="projects__name">Op de wachtlijst</h4>
                         </a>
                     </div>
                     <div class="projects__slide">
                         <a href="projects/bangvoorbeperking.html">
-                            <img loading="lazy" class="projects__image" src="img/projects/teaser/bang_voor_beperking-teaser.webp" alt="Preview of Bang voor beperking documentary showing..." loading="lazy" />
+                            <img
+                                class="projects__image"
+                                src="img/projects/teaser/bangvoorbeperking-teaser-800.webp"
+                                srcset="img/projects/teaser/bangvoorbeperking-teaser-400.webp 400w, img/projects/teaser/bangvoorbeperking-teaser-800.webp 800w, img/projects/teaser/bangvoorbeperking-teaser-1200.webp 1200w"
+                                sizes="(max-width: 600px) 100vw, (max-width: 1024px) 50vw, 33vw"
+                                alt="Bang voor beperking. Een puber met het syndroom van Down staat op de speelplaats. Explore"
+                                loading="lazy"
+                            />
                             <h4 class="projects__name">Bang voor beperking</h4>
                         </a>
                     </div>
                     <div class="projects__slide">
                         <a href="projects/samen_dansen_met_cemi.html">
-                            <img loading="lazy" class="projects__image" src="img/projects/teaser/samen_dansen-met-cemi-teaser.webp" alt="Preview of SAMen dansen met CEMI documentary showing..." loading="lazy" />
+                            <img
+                                class="projects__image"
+                                src="img/projects/teaser/samen_dansen_met_cemi-teaser-800.webp"
+                                srcset="img/projects/teaser/samen_dansen_met_cemi-teaser-400.webp 400w, img/projects/teaser/samen_dansen_met_cemi-teaser-800.webp 800w, img/projects/teaser/samen_dansen_met_cemi-teaser-1200.webp 1200w"
+                                sizes="(max-width: 600px) 100vw, (max-width: 1024px) 50vw, 33vw"
+                                alt="SAMen dansen met CEMI. De jonge vrouw met het Downsydnroom danst samen met haar zusje en Celine en Michiel in een woonkamer. Explore"
+                                loading="lazy"
+                            />
                             <h4 class="projects__name">SAMen dansen met CEMI</h4>
                         </a>
                     </div>
                     <div class="projects__slide">
                         <a href="projects/samen_inclusief_onderwijs.html">
-                            <img loading="lazy" class="projects__image" src="img/projects/teaser/samen_inclusief_onderwijs-teaser.webp" alt="Preview of SAMen inclusief onderwijs documentary showing..." loading="lazy" />
+                            <img
+                                class="projects__image"
+                                src="img/projects/teaser/samen_inclusief_onderwijs-teaser-800.webp"
+                                srcset="img/projects/teaser/samen_inclusief_onderwijs-teaser-400.webp 400w, img/projects/teaser/samen_inclusief_onderwijs-teaser-800.webp 800w, img/projects/teaser/samen_inclusief_onderwijs-teaser-1200.webp 1200w"
+                                sizes="(max-width: 600px) 100vw, (max-width: 1024px) 50vw, 33vw"
+                                alt="SAMen inclusief onderwijs. Een 13-jarig meisje met Downsyndroom zit aan een tafel terwijl ze uitleg geeft. Explore"
+                                loading="lazy"
+                            />
                             <h4 class="projects__name">SAMen inclusief onderwijs</h4>
                         </a>
                     </div>
                     <div class="projects__slide">
                         <a href="projects/inclusiecharter.html">
-                            <img loading="lazy" class="projects__image" src="img/projects/teaser/inclusiecharter-teaser.webp" alt="Preview of Inclusiecharter documentary showing..." loading="lazy" />
+                            <img
+                                class="projects__image"
+                                src="img/projects/teaser/inclusiecharter-teaser-800.webp"
+                                srcset="img/projects/teaser/inclusiecharter-teaser-400.webp 400w, img/projects/teaser/inclusiecharter-teaser-800.webp 800w, img/projects/teaser/inclusiecharter-teaser-1200.webp 1200w"
+                                sizes="(max-width: 600px) 100vw, (max-width: 1024px) 50vw, 33vw"
+                                alt="Inclusiecharter. Een volwassen man spreekt de kijker toe. Explore"
+                                loading="lazy"
+                            />
                             <h4 class="projects__name">Inclusiecharter</h4>
                         </a>
                     </div>
                     <div class="projects__slide">
                         <a href="projects/workouts_sam.html">
-                            <img loading="lazy" class="projects__image" src="img/projects/teaser/workouts_sam-teaser.webp" alt="Preview of Workouts Sam documentary showing..." loading="lazy" />
+                            <img
+                                class="projects__image"
+                                src="img/projects/teaser/workouts_sam-teaser-800.webp"
+                                srcset="img/projects/teaser/workouts_sam-teaser-400.webp 400w, img/projects/teaser/workouts_sam-teaser-800.webp 800w, img/projects/teaser/workouts_sam-teaser-1200.webp 1200w"
+                                sizes="(max-width: 600px) 100vw, (max-width: 1024px) 50vw, 33vw"
+                                alt="Workouts Sam. Een jonge man turnt op een mat. Er staat een rollator achter hem. Explore"
+                                loading="lazy"
+                            />
                             <h4 class="projects__name">Workouts Sam</h4>
                         </a>
                     </div>
                     <div class="projects__slide">
                         <a href="projects/sayyes.html">
-                            <img loading="lazy" class="projects__image" src="img/projects/teaser/sayyes-teaser.webp" alt="Preview of sayyes documentary showing..." loading="lazy" />
+                            <img
+                                class="projects__image"
+                                src="img/projects/teaser/sayyes-teaser-800.webp"
+                                srcset="img/projects/teaser/sayyes-teaser-400.webp 400w, img/projects/teaser/sayyes-teaser-800.webp 800w, img/projects/teaser/sayyes-teaser-1200.webp 1200w"
+                                sizes="(max-width: 600px) 100vw, (max-width: 1024px) 50vw, 33vw"
+                                alt="#sayyes. Een jong meisje juicht heel enthousiast, samen met haar klasgenoten. Explore"
+                                loading="lazy"
+                            />
                             <h4 class="projects__name">#sayyes</h4>
                         </a>
                     </div>
                     <div class="projects__slide">
                         <a href="projects/mijnassistent.html">
-                            <img loading="lazy" class="projects__image" src="img/projects/teaser/mijnassistent-teaser.webp" alt="Preview of mijnassistent documentary showing..." loading="lazy" />
+                            <img
+                                class="projects__image"
+                                src="img/projects/teaser/mijnassistent-teaser-800.webp"
+                                srcset="img/projects/teaser/mijnassistent-teaser-400.webp 400w, img/projects/teaser/mijnassistent-teaser-800.webp 800w, img/projects/teaser/mijnassistent-teaser-1200.webp 1200w"
+                                sizes="(max-width: 600px) 100vw, (max-width: 1024px) 50vw, 33vw"
+                                alt="#mijnassistent. Een puber wordt in de klas geholpen door een volwassen man. Explore"
+                                loading="lazy"
+                            />
                             <h4 class="projects__name">#mijnassistent</h4>
                         </a>
                     </div>

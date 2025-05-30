@@ -55,7 +55,14 @@
 
         <!-- About -->
         <header class="about__header" role="banner">
-            <img class="about__header__img" src="img/about/header.webp" alt="De Seizoenen - Over ons" loading="lazy" />
+            <img
+                class="about__header__img"
+                src="img/about/header-800.webp"
+                srcset="img/about/header-400.webp 400w, img/about/header-800.webp 800w, img/about/header-1200.webp 1200w"
+                sizes="(max-width: 600px) 100vw, (max-width: 1024px) 100vw, 100vw"
+                alt="Een foto van videoreporter Luk Dewulf die met zijn camera een beeld schiet van 2 meisjes die, in een volle zaal, aandachtig naar een smartphone kijken."
+                loading="lazy"
+            />
             <h2 class="about__header__title">Over ons</h2>
         </header>
 
@@ -86,6 +93,7 @@
                         referrerpolicy="strict-origin-when-cross-origin"
                         allowfullscreen
                         aria-label="Portfolio video"
+                        alt="Een video van 1 minuut en 22 seconden die toont hoe divers het productiehuis De Seizoenen is. Het productiehuis neemt diepgaande interviews af om authentieke verhalen te vertellen. We maakten al reportages voor verschillende lokale, nationale en internationale TV-zenders en youtubekanalen. We werken, afhankelijk van het doel, met één of meerdere camera's en wonnen al verschillende mediaprijzen. "
                     ></iframe>
                 </div>
             </div>
