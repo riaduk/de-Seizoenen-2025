@@ -50,6 +50,29 @@
     margin-top: 0.25rem;
 }
 
+/* Audio Description Toggle Styles */
+.navbar__audio-toggle {
+    text-transform: uppercase;
+    background-color: var(--color-accent-green);
+    color: rgb(var(--color-white));
+    font-weight: bold;
+    border: 2px solid var(--color-accent-green);
+    border-radius: 5px;
+    padding: 0.5rem 1rem;
+    margin-left: 1rem;
+    cursor: pointer;
+    transition: background 0.2s, color 0.2s, border-color 0.2s;
+    font-family: var(--font-body), sans-serif;
+    letter-spacing: 0.05em;
+    font-size: 0.7rem;
+    box-shadow: 0 1px 4px rgba(0, 0, 0, 0.06);
+}
+.navbar__audio-toggle[aria-pressed='true'] {
+    background-color: var(--color-light-grey);
+    color: var(--color-accent-grey);
+    border-color: var(--color-accent-grey);
+}
+
 /* Menu is hidden by default */
 .navbar__menu {
     display: none;

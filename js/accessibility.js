@@ -1,6 +1,33 @@
 // Accessibility Enhancements
 
 document.addEventListener('DOMContentLoaded', () => {
+    // Audio Description Toggle Logic
+    const audioToggle = document.querySelector('.navbar__audio-toggle');
+    if (audioToggle) {
+        function setAudioDescState(active) {
+            audioToggle.setAttribute('aria-pressed', active ? 'true' : 'false');
+            audioToggle.textContent = active ? 'audiodescriptie afzetten' : 'audiodescriptie aanzetten';
+            if (active) {
+                document.body.classList.add('audio-desc-enabled');
+            } else {
+                document.body.classList.remove('audio-desc-enabled');
+            }
+            announceChange(active ? 'Audiodescriptie aan.' : 'Audiodescriptie uit.');
+        }
+        let audioDescActive = false;
+        audioToggle.addEventListener('click', () => {
+            audioDescActive = !audioDescActive;
+            setAudioDescState(audioDescActive);
+        });
+        audioToggle.addEventListener('keydown', e => {
+            if (e.key === 'Enter' || e.key === ' ') {
+                e.preventDefault();
+                audioDescActive = !audioDescActive;
+                setAudioDescState(audioDescActive);
+            }
+        });
+    }
+
     // Keyboard Navigation Improvements
     const focusableElements = document.querySelectorAll('a, button, input, select, textarea');
     focusableElements.forEach(element => {
@@ -76,35 +103,26 @@ document.addEventListener('DOMContentLoaded', () => {
     // --- Hover Audio Logic ---
     const hoverAudioTargets = document.querySelectorAll('.hover-audio-target');
     hoverAudioTargets.forEach(div => {
-        function showBox() {
-            document.querySelectorAll('.audio-description-box').forEach(box => {
-                box.style.display = 'none';
-                const audio = box.querySelector('.hover-audio-player');
-                if (audio) {
-                    audio.pause && audio.pause();
-                    audio.currentTime = 0;
-                }
-            });
+        div.addEventListener('mouseleave', () => {
             const box = div.querySelector('.audio-description-box');
             if (box) {
-                box.style.display = 'flex';
-            }
-        }
-        function hideBox() {
-            const box = div.querySelector('.audio-description-box');
-            if (box) {
-                box.style.display = 'none';
                 const audio = box.querySelector('.hover-audio-player');
                 if (audio) {
                     audio.pause && audio.pause();
                     audio.currentTime = 0;
                 }
             }
-        }
-        div.addEventListener('mouseenter', showBox);
-        div.addEventListener('mouseleave', hideBox);
-        div.addEventListener('focus', showBox);
-        div.addEventListener('blur', hideBox);
+        });
+        div.addEventListener('blur', () => {
+            const box = div.querySelector('.audio-description-box');
+            if (box) {
+                const audio = box.querySelector('.hover-audio-player');
+                if (audio) {
+                    audio.pause && audio.pause();
+                    audio.currentTime = 0;
+                }
+            }
+        });
     });
 });
 

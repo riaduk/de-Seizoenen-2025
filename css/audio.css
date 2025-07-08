@@ -13,13 +13,17 @@
     color: #fff;
     padding: 0.5rem;
     border-radius: 5px;
-    display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     z-index: 9998;
     margin: 0;
     pointer-events: auto;
+}
+
+body.audio-desc-enabled .hover-audio-target:hover > .audio-description-box,
+body.audio-desc-enabled .hover-audio-target:focus-within > .audio-description-box {
+    display: flex;
 }
 
 .audio-description-box--top {
