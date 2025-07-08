@@ -36,7 +36,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // Color Contrast Checker
     function checkColorContrast(foreground, background) {
-        const getLuminance = (color) => {
+        const getLuminance = color => {
             const rgb = color.match(/\d+/g).map(Number);
             const [r, g, b] = rgb.map(c => {
                 c /= 255;
@@ -72,4 +72,54 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
     warnLowContrastElements();
+
+    // --- Hover Audio Logic ---
+    const hoverAudioTargets = document.querySelectorAll('.hover-audio-target');
+    hoverAudioTargets.forEach(div => {
+        function showBox() {
+            document.querySelectorAll('.audio-description-box').forEach(box => {
+                box.style.display = 'none';
+                const audio = box.querySelector('.hover-audio-player');
+                if (audio) {
+                    audio.pause && audio.pause();
+                    audio.currentTime = 0;
+                }
+            });
+            const box = div.querySelector('.audio-description-box');
+            if (box) {
+                box.style.display = 'flex';
+            }
+        }
+        function hideBox() {
+            const box = div.querySelector('.audio-description-box');
+            if (box) {
+                box.style.display = 'none';
+                const audio = box.querySelector('.hover-audio-player');
+                if (audio) {
+                    audio.pause && audio.pause();
+                    audio.currentTime = 0;
+                }
+            }
+        }
+        div.addEventListener('mouseenter', showBox);
+        div.addEventListener('mouseleave', hideBox);
+        div.addEventListener('focus', showBox);
+        div.addEventListener('blur', hideBox);
+    });
 });
+
+// --- Audio/Video Sync for Intro Slide Only ---
+const introAudio = document.getElementById('intro-audio');
+const introVideo = document.getElementById('intro-video');
+if (introAudio && introVideo) {
+    introAudio.addEventListener('play', function () {
+        if (Math.abs(introAudio.currentTime) < 0.05) {
+            // start of audio
+            introVideo.currentTime = 0;
+        }
+        introVideo.play();
+    });
+    introAudio.addEventListener('pause', function () {
+        introVideo.pause();
+    });
+}

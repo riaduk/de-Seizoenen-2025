@@ -35,6 +35,9 @@
                         <span class="navbar__toggle-bar"></span>
                     </button>
                 </div>
+                <div class="navbar__audio-toggle" tabindex="0" role="button" aria-pressed="false">
+                    audiodescriptie aanzetten
+                </div>
                 <div class="navbar__menu">
                     <ul class="navbar__list">
                         <li class="navbar__item"><a href="index.html" class="navbar__link">Home</a></li>
@@ -54,7 +57,11 @@
         </nav>
 
         <!-- About -->
-        <header class="about__header" role="banner">
+        <header class="about__header hover-audio-target" aria-current="true" tabindex="0" role="banner">
+            <div class="audio-description-box audio-description-box--right" role="region" aria-label="Audiodescriptie over ons">
+                <h4 class="audio-description-header"">Geniet nu van audiodescriptie</h4>
+                <audio class="hover-audio-player" src="audio/About/over ons.mp3" controls aria-labelledby="carousel-audio-desc-label"></audio>
+            </div>
             <img
                 class="about__header__img"
                 src="img/about/header-800.webp"
@@ -66,7 +73,11 @@
             <h2 class="about__header__title">Over ons</h2>
         </header>
 
-        <main id="main-content" class="about__main" role="main">
+        <main id="main-content" class="about__main hover-audio-target" aria-current="true" tabindex="0" role="main">
+            <div class="audio-description-box audio-description-box--right" role="region" aria-label="Audiodescriptie over ons">
+                <h4 class="audio-description-header"">Geniet nu van audiodescriptie</h4>
+                <audio class="hover-audio-player" src="audio/About/inclusie is.mp3" controls aria-labelledby="carousel-audio-desc-label"></audio>
+            </div>
             <div class="about__main__intro">
                 <h1 class="about__main__title" aria-label="ONS DNA">
                     <span>O</span>
@@ -80,7 +91,11 @@
                     <span>A</span>
                 </h1>
             </div>
-            <div class="about__main__content">
+            <div class="about__main__content hover-audio-target" aria-current="true" tabindex="0">
+                <div class="audio-description-box audio-description-box--right" role="region" aria-label="Audiodescriptie de Seizoenen">
+                    <h4 class="audio-description-header">Geniet nu van audiodescriptie</h4>
+                    <audio class="hover-audio-player" src="audio/About/nothing about.mp3" controls aria-labelledby="carousel-audio-desc-label"></audio>
+                </div>
                 <h6 class="about__main__subtitle">Nothing about us without us</h6>
                 <p class="about__main__text">Daarom staat bij ons de persoon met een beperking centraal in onze video's. De videocampagnes zijn creatieve producten die de band tussen mensen met en zonder beperking versterken. We zitten graag rond de tafel zodat uw boodschap zoveel mogelijk mensen bereikt.</p>
                 <div class="about__main__video-container">
@@ -93,7 +108,7 @@
                         referrerpolicy="strict-origin-when-cross-origin"
                         allowfullscreen
                         aria-label="Portfolio video"
-                        alt="Een video van 1 minuut en 22 seconden die toont hoe divers het productiehuis De Seizoenen is. Het productiehuis neemt diepgaande interviews af om authentieke verhalen te vertellen. We maakten al reportages voor verschillende lokale, nationale en internationale TV-zenders en youtubekanalen. We werken, afhankelijk van het doel, met één of meerdere camera's en wonnen al verschillende mediaprijzen. "
+                        alt="Een video van 1 minuut en 22 seconden die toont hoe divers het productiehuis De Seizoenen is. Het productiehuis neemt diepgaande interviews af om authentieke verhalen te vertellen. We maakten al reportages voor verschillende lokale, nationale en internationale TV-zenders en youtubekanalen. We werken, afhankelijk van het doel, met één of meerdere camera's en wonnen al verschillende mediaprijzen."
                     ></iframe>
                 </div>
             </div>

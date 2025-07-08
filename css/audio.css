@@ -1,0 +1,76 @@
+/* Hide the audio player by default */
+.hover-audio-target {
+    position: relative;
+}
+
+/* Audio description box styles */
+.audio-description-box {
+    background-color: var(--color-accent-green);
+    border: 1px solid #000;
+    position: absolute;
+    display: none;
+    width: fit-content;
+    color: #fff;
+    padding: 0.5rem;
+    border-radius: 5px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    z-index: 9998;
+    margin: 0;
+    pointer-events: auto;
+}
+
+.audio-description-box--top {
+    top: 0.5rem;
+    left: 0.5rem;
+}
+
+.audio-description-box--right {
+    top: 5rem;
+    right: 8%;
+}
+
+.audio-description-box--left {
+    top: 1rem;
+    left: 1rem;
+}
+
+.audio-description-header {
+    font-size: 1rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    margin-bottom: 0.5rem;
+    letter-spacing: 0.03em;
+    text-align: center;
+}
+
+.audio-description-miniheader {
+    font-size: 0.6rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    margin-bottom: 0.3rem;
+    text-align: center;
+}
+
+.hover-audio-player {
+    border: 1px solid #888888;
+    border-radius: 7px;
+    z-index: 9999;
+    display: block;
+}
+
+.hover-audio-player--mini {
+    width: 11rem;
+}
+
+.hover-audio-player::-webkit-media-controls-enclosure {
+    border-radius: 6px;
+}
+/*
+.hover-audio-player__topleft {
+    left: 50%;
+    top: 4rem;
+    transform: translateX(-50%);
+}*/
