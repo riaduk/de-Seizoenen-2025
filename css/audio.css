@@ -8,7 +8,6 @@
     background-color: var(--color-accent-green);
     border: 1px solid #000;
     position: absolute;
-    display: none;
     width: fit-content;
     color: #fff;
     padding: 0.5rem;
@@ -21,8 +20,14 @@
     pointer-events: auto;
 }
 
-body.audio-desc-enabled .hover-audio-target:hover > .audio-description-box,
-body.audio-desc-enabled .hover-audio-target:focus-within > .audio-description-box {
+/* Hide audio boxes by default on desktop */
+.hover-audio-target .audio-description-box {
+    display: none;
+}
+
+/* Show on hover or focus */
+.audio-desc-enabled .hover-audio-target:hover .audio-description-box,
+.audio-desc-enabled .hover-audio-target:focus-within .audio-description-box {
     display: flex;
 }
 
@@ -39,6 +44,10 @@ body.audio-desc-enabled .hover-audio-target:focus-within > .audio-description-bo
 .audio-description-box--left {
     top: 1rem;
     left: 1rem;
+}
+
+.audio-description-box--mobile {
+    display: none;
 }
 
 .audio-description-header {

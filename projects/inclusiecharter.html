@@ -38,7 +38,7 @@
                         <span class="navbar__toggle-bar"></span>
                     </button>
                 </div>
-                <button class="navbar__audio-toggle" type="button" aria-pressed="false">audiodescriptie afzetten</button>
+                <button class="navbar__audio-toggle" type="button" aria-pressed="false">audiodescriptie aanzetten</button>
                 <div class="navbar__menu" id="navbar-menu">
                     <ul class="navbar__list">
                         <li class="navbar__item"><a href="../index.html" class="navbar__link">Home</a></li>
@@ -58,9 +58,13 @@
         </nav>
 
         <!-- Inclusiecharter -->
-        <main id="main-content" class="project__main project__container" role="main">
+        <main id="main-content" class="project__main project__container hover-audio-target" aria-current="true" tabindex="0" role="main">
+            <div class="audio-description-box audio-description-box--right" role="region" aria-label="Audiodescriptie van Inclusiecharter">
+                <h4 class="audio-description-header">Geniet nu van audiodescriptie</h4>
+                <audio class="hover-audio-player" src="../audio/Projects/inclulsiecharter/inclusiecharter.mp3" controls aria-labelledby="carousel-audio-desc-label"></audio>
+            </div>
             <a href="https://www.instagram.com/reel/CxQYvJGoY2y/?utm_source=ig_web_copy_link&igsh=MzRlODBiNWFlZA==" target="_blank" rel="noopener noreferrer" class="project__btn project__btn--link" aria-label="Bekijk Inclusiecharter"></a>
-            <div class="project__intro" role="region" aria-label="Project introductie">
+            <div class="project__intro" role="region" aria-label="Project introductie" data-audio-id="inclusiecharter">
                 <div class="project__intro-column">
                     <h1 class="project__title">Inclusiecharter</h1>
                     <p class="project__description">Samen met de acteurs van Cripping de Space namen we een instagramreel op over het inclusiecharter voor mensen met een beperking. We kozen voor een reel zodat het lijvige charter door een groot publiek zou gelezen worden.</p>
@@ -71,15 +75,20 @@
                         De acteurs memoriseren elk een deel van de essentie van het charter. Door een efficiënte planning namen we op korte tijd de versie van 7 acteurs op. Binnen het uur werd de video gemonteerd en al tijdens het festival op instagram gedeeld. Door snel high end content aan te leveren kreeg de video veel liefde online.
                     </p>
                 </div>
+                <div class="audio-description-box--mobile"></div>
             </div>
             <div class="project__image">
-                <img
-                    src="../img/projects/intro/inclusiecharter-800.webp"
-                    srcset="../img/projects/intro/inclusiecharter-400.webp 400w, ../img/projects/intro/inclusiecharter-800.webp 800w, ../img/projects/intro/inclusiecharter-1200.webp 1200w"
-                    sizes="(max-width: 600px) 100vw, (max-width: 1024px) 100vw, 100vw"
-                    alt="Stills uit de Inclusiecharter video"
-                    loading="lazy"
-                />
+                <picture>
+                    <source srcset="../img/projects/intro/mobile/inclusiecharter-800.webp" media="(max-width: 600px)" />
+                    <source srcset="../img/projects/intro/inclusiecharter-400.webp 400w, ../img/projects/intro/inclusiecharter-800.webp 800w, ../img/projects/intro/inclusiecharter-1200.webp 1200w" media="(min-width: 601px)" />
+                    <img
+                        src="../img/projects/intro/inclusiecharter-800.webp"
+                        srcset="../img/projects/intro/inclusiecharter-400.webp 400w, ../img/projects/intro/inclusiecharter-800.webp 800w, ../img/projects/intro/inclusiecharter-1200.webp 1200w"
+                        sizes="(max-width: 600px) 100vw, (max-width: 1024px) 100vw, 100vw"
+                        alt="Stills uit de Inclusiecharter video"
+                        loading="lazy"
+                    />
+                </picture>
             </div>
         </main>
 

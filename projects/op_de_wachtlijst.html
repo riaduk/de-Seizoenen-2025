@@ -38,7 +38,7 @@
                         <span class="navbar__toggle-bar"></span>
                     </button>
                 </div>
-                <button class="navbar__audio-toggle" type="button" aria-pressed="false">audiodescriptie afzetten</button>
+                <button class="navbar__audio-toggle" type="button" aria-pressed="false">audiodescriptie aanzetten</button>
                 <div class="navbar__menu" id="navbar-menu">
                     <ul class="navbar__list">
                         <li class="navbar__item"><a href="../index.html" class="navbar__link">Home</a></li>
@@ -58,9 +58,13 @@
         </nav>
 
         <!-- Op de wachtlijst -->
-        <main id="main-content" class="project__main project__container" role="main">
+        <main id="main-content" class="project__main project__container hover-audio-target" aria-current="true" tabindex="0" role="main">
+            <div class="audio-description-box audio-description-box--right" role="region" aria-label="Audiodescriptie van Op de Wachtlijst">
+                <h4 class="audio-description-header">Geniet nu van audiodescriptie</h4>
+                <audio class="hover-audio-player" src="../audio/Projects/op de wachtlijst/op de wachtlijst.mp3" controls aria-labelledby="carousel-audio-desc-label"></audio>
+            </div>
             <button class="project__btn" aria-label="Project weergave wisselen"></button>
-            <div class="project__intro" role="region" aria-label="Project introductie">
+            <div class="project__intro" role="region" aria-label="Project introductie" data-audio-id="op-de-wachtlijst">
                 <div class="project__intro-column">
                     <h1 class="project__title">Op de wachtlijst</h1>
                     <p class="project__description">De blindgeboren accordeonist en zanger Sacha Van Loo schreef een ludieke tekst die duidelijk illustreert dat duizenden mensen met een beperking al jarenlang in de kou staan. Na een strategische lancering werd de videoclip opgepikt door De Standaard, ATV/GVA, De Morgen en Radio&nbsp;2.</p>
@@ -72,15 +76,20 @@
                         audiodescriptie zodat hij ook toegankelijk is voor slechtzienden, blinden of slechthorenden.
                     </p>
                 </div>
+                <div class="audio-description-box--mobile"></div>
             </div>
             <div class="project__image">
-                <img
-                    src="../img/projects/intro/op_de_wachtlijst-800.webp"
-                    srcset="../img/projects/intro/op_de_wachtlijst-400.webp 400w, ../img/projects/intro/op_de_wachtlijst-800.webp 800w, ../img/projects/intro/op_de_wachtlijst-1200.webp 1200w"
-                    sizes="(max-width: 600px) 100vw, (max-width: 1024px) 100vw, 100vw"
-                    alt="Een blinde man zingt enthousiast terwijl hij musiceert op de accordeon. Explore"
-                    loading="lazy"
-                />
+                <picture>
+                    <source srcset="../img/projects/intro/mobile/op_de_wachtlijst-800.webp" media="(max-width: 600px)" />
+                    <source srcset="../img/projects/intro/op_de_wachtlijst-400.webp 400w, ../img/projects/intro/op_de_wachtlijst-800.webp 800w, ../img/projects/intro/op_de_wachtlijst-1200.webp 1200w" media="(min-width: 601px)" />
+                    <img
+                        src="../img/projects/intro/op_de_wachtlijst-800.webp"
+                        srcset="../img/projects/intro/op_de_wachtlijst-400.webp 400w, ../img/projects/intro/op_de_wachtlijst-800.webp 800w, ../img/projects/intro/op_de_wachtlijst-1200.webp 1200w"
+                        sizes="(max-width: 600px) 100vw, (max-width: 1024px) 100vw, 100vw"
+                        alt="Een blinde man zingt enthousiast terwijl hij musiceert op de accordeon. Explore"
+                        loading="lazy"
+                    />
+                </picture>
             </div>
             <iframe
                 class="project__video"

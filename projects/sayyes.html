@@ -38,7 +38,7 @@
                         <span class="navbar__toggle-bar"></span>
                     </button>
                 </div>
-                <button class="navbar__audio-toggle" type="button" aria-pressed="false">audiodescriptie afzetten</button>
+                <button class="navbar__audio-toggle" type="button" aria-pressed="false">audiodescriptie aanzetten</button>
                 <div class="navbar__menu" id="navbar-menu">
                     <ul class="navbar__list">
                         <li class="navbar__item"><a href="../index.html" class="navbar__link">Home</a></li>
@@ -58,9 +58,13 @@
         </nav>
 
         <!-- #sayyes -->
-        <main id="main-content" class="project__main project__container" role="main">
+        <main id="main-content" class="project__main project__container hover-audio-target" aria-current="true" tabindex="0" role="main">
+            <div class="audio-description-box audio-description-box--right" role="region" aria-label="Audiodescriptie van #sayyes">
+                <h4 class="audio-description-header">Geniet nu van audiodescriptie</h4>
+                <audio class="hover-audio-player" src="../audio/Projects/sayyes/sayyes.mp3" controls aria-labelledby="carousel-audio-desc-label"></audio>
+            </div>
             <button class="project__btn" aria-label="Project weergave wisselen"></button>
-            <div class="project__intro" role="region" aria-label="Project introductie">
+            <div class="project__intro" role="region" aria-label="Project introductie" data-audio-id="sayyes">
                 <div class="project__intro-column">
                     <h1 class="project__title">#sayyes</h1>
                     <p class="project__description">#sayyes is een krachtige video die kijkers toont dat kinderen met een beperking rechten hebben: het recht om in een warm gezin op te groeien, recht om naar school te gaan in de eigen buurt, recht op vrije keuze van het vrijetijdsaanbod,…</p>
@@ -72,15 +76,20 @@
                         beroert zorgt ervoor dat de video zowel bij lancering op korte termijn als vandaag nog steeds IMPACT genereert.
                     </p>
                 </div>
+                <div class="audio-description-box--mobile"></div>
             </div>
             <div class="project__image">
-                <img
-                    src="../img/projects/intro/sayyes-800.webp"
-                    srcset="../img/projects/intro/sayyes-400.webp 400w, ../img/projects/intro/sayyes-800.webp 800w, ../img/projects/intro/sayyes-1200.webp 1200w"
-                    sizes="(max-width: 600px) 100vw, (max-width: 1024px) 100vw, 100vw"
-                    alt="Een jong meisje juicht heel enthousiast, samen met haar klasgenoten. Explore"
-                    loading="lazy"
-                />
+                <picture>
+                    <source srcset="../img/projects/intro/mobile/sayyes-800.webp" media="(max-width: 600px)" />
+                    <source srcset="../img/projects/intro/sayyes-400.webp 400w, ../img/projects/intro/sayyes-800.webp 800w, ../img/projects/intro/sayyes-1200.webp 1200w" media="(min-width: 601px)" />
+                    <img
+                        src="../img/projects/intro/sayyes-800.webp"
+                        srcset="../img/projects/intro/sayyes-400.webp 400w, ../img/projects/intro/sayyes-800.webp 800w, ../img/projects/intro/sayyes-1200.webp 1200w"
+                        sizes="(max-width: 600px) 100vw, (max-width: 1024px) 100vw, 100vw"
+                        alt="Een jong meisje juicht heel enthousiast, samen met haar klasgenoten. Explore"
+                        loading="lazy"
+                    />
+                </picture>
             </div>
             <iframe
                 class="project__video"

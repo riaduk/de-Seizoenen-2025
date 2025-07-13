@@ -59,7 +59,6 @@
     border: 2px solid var(--color-accent-green);
     border-radius: 5px;
     padding: 0.5rem 1rem;
-    margin-left: 1rem;
     cursor: pointer;
     transition: background 0.2s, color 0.2s, border-color 0.2s;
     font-family: var(--font-body), sans-serif;

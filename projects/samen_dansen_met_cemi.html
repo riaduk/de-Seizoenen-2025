@@ -38,7 +38,7 @@
                         <span class="navbar__toggle-bar"></span>
                     </button>
                 </div>
-                <button class="navbar__audio-toggle" type="button" aria-pressed="false">audiodescriptie afzetten</button>
+                <button class="navbar__audio-toggle" type="button" aria-pressed="false">audiodescriptie aanzetten</button>
                 <div class="navbar__menu" id="navbar-menu">
                     <ul class="navbar__list">
                         <li class="navbar__item"><a href="../index.html" class="navbar__link">Home</a></li>
@@ -58,9 +58,13 @@
         </nav>
 
         <!-- SAMen dansen met CEMI -->
-        <main id="main-content" class="project__main project__container" role="main">
+        <main id="main-content" class="project__main project__container hover-audio-target" aria-current="true" tabindex="0" role="main">
+            <div class="audio-description-box audio-description-box--right" role="region" aria-label="Audiodescriptie van SAMen dansen met CEMI">
+                <h4 class="audio-description-header">Geniet nu van audiodescriptie</h4>
+                <audio class="hover-audio-player" src="../audio/Projects/samen dansen met cemi/samen dansen met cemi.mp3" controls aria-labelledby="carousel-audio-desc-label"></audio>
+            </div>
             <button class="project__btn" aria-label="Project weergave wisselen"></button>
-            <div class="project__intro" role="region" aria-label="Project introductie">
+            <div class="project__intro" role="region" aria-label="Project introductie" data-audio-id="samen_dansen_met_cemi">
                 <div class="project__intro-column">
                     <h1 class="project__title">SAMen dansen met CEMI</h1>
                     <p class="project__description">Deze collabvideo met Celine Dept en Michiel Callebaut, beter bekend als CEMI, haalde een paar honderdduizend views op diverse online platformen. In opdracht van onze klant realiseerden we een videocampagne over inclusie met deze dansvideo en een onderwijs video.</p>
@@ -72,15 +76,20 @@
                         werd onze boodschap verspreid bij een jonge doelgroep.
                     </p>
                 </div>
+                <div class="audio-description-box--mobile"></div>
             </div>
             <div class="project__image">
-                <img
-                    src="../img/projects/intro/samen_dansen_met_cemi-800.webp"
-                    srcset="../img/projects/intro/samen_dansen_met_cemi-400.webp 400w, ../img/projects/intro/samen_dansen_met_cemi-800.webp 800w, ../img/projects/intro/samen_dansen_met_cemi-1200.webp 1200w"
-                    sizes="(max-width: 600px) 100vw, (max-width: 1024px) 100vw, 100vw"
-                    alt="De jonge vrouw met het Downsydnroom danst samen met haar zusje en Celine en Michiel in een woonkamer. Explore"
-                    loading="lazy"
-                />
+                <picture>
+                    <source srcset="../img/projects/intro/mobile/samen_dansen_met_cemi-800.webp" media="(max-width: 600px)" />
+                    <source srcset="../img/projects/intro/samen_dansen_met_cemi-400.webp 400w, ../img/projects/intro/samen_dansen_met_cemi-800.webp 800w, ../img/projects/intro/samen_dansen_met_cemi-1200.webp 1200w" media="(min-width: 601px)" />
+                    <img
+                        src="../img/projects/intro/samen_dansen_met_cemi-800.webp"
+                        srcset="../img/projects/intro/samen_dansen_met_cemi-400.webp 400w, ../img/projects/intro/samen_dansen_met_cemi-800.webp 800w, ../img/projects/intro/samen_dansen_met_cemi-1200.webp 1200w"
+                        sizes="(max-width: 600px) 100vw, (max-width: 1024px) 100vw, 100vw"
+                        alt="De jonge vrouw met het Downsydnroom danst samen met haar zusje en Celine en Michiel in een woonkamer. Explore"
+                        loading="lazy"
+                    />
+                </picture>
             </div>
             <iframe
                 class="project__video"

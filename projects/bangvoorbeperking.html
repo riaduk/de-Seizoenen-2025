@@ -38,7 +38,7 @@
                         <span class="navbar__toggle-bar"></span>
                     </button>
                 </div>
-                <button class="navbar__audio-toggle" type="button" aria-pressed="false">audiodescriptie afzetten</button>
+                <button class="navbar__audio-toggle" type="button" aria-pressed="false">audiodescriptie aanzetten</button>
                 <div class="navbar__menu" id="navbar-menu">
                     <ul class="navbar__list">
                         <li class="navbar__item"><a href="../index.html" class="navbar__link">Home</a></li>
@@ -58,9 +58,13 @@
         </nav>
 
         <!-- Bang voor beperking -->
-        <main id="main-content" class="project__main project__container" role="main">
+        <main id="main-content" class="project__main project__container hover-audio-target" aria-current="true" tabindex="0" role="main">
+            <div class="audio-description-box audio-description-box--right" role="region" aria-label="Audiodescriptie van Bang voor beperking">
+                <h4 class="audio-description-header">Geniet nu van audiodescriptie</h4>
+                <audio class="hover-audio-player" src="../audio/Projects/bang voor beperking/bang.mp3" controls aria-labelledby="carousel-audio-desc-label"></audio>
+            </div>
             <button class="project__btn" aria-label="Project weergave wisselen"></button>
-            <div class="project__intro" role="region" aria-label="Project introductie">
+            <div class="project__intro" role="region" aria-label="Project introductie" data-audio-id="bangvoorbeperking">
                 <div class="project__intro-column">
                     <h1 class="project__title">Bang voor beperking</h1>
                     <p class="project__description">
@@ -74,15 +78,20 @@
                         Deze reportage visualiseert 3 topics ten gronde. Dankzij het persoonlijke verhaal van Wout wordt inclusie tastbaar voor jou en mij. Door onze enquête bij 900 leerkrachten is de content representatief. Via de undercoverbeelden schudden we het onderwijsveld wakker over een onbekende en schandalige praktijk.
                     </p>
                 </div>
+                <div class="audio-description-box--mobile"></div>
             </div>
             <div class="project__image">
-                <img
-                    src="../img/projects/intro/bangvoorbeperking-800.webp"
-                    srcset="../img/projects/intro/bangvoorbeperking-400.webp 400w, ../img/projects/intro/bangvoorbeperking-800.webp 800w, ../img/projects/intro/bangvoorbeperking-1200.webp 1200w"
-                    sizes="(max-width: 600px) 100vw, (max-width: 1024px) 100vw, 100vw"
-                    alt="Bang voor beperking. Een puber met het syndroom van Down staat op de speelplaats. Explore"
-                    loading="lazy"
-                />
+                <picture>
+                    <source srcset="../img/projects/intro/mobile/bangvoorbeperking-800.webp" media="(max-width: 600px)" />
+                    <source srcset="../img/projects/intro/bangvoorbeperking-400.webp 400w, ../img/projects/intro/bangvoorbeperking-800.webp 800w, ../img/projects/intro/bangvoorbeperking-1200.webp 1200w" media="(min-width: 601px)" />
+                    <img
+                        src="../img/projects/intro/bangvoorbeperking-800.webp"
+                        srcset="../img/projects/intro/bangvoorbeperking-400.webp 400w, ../img/projects/intro/bangvoorbeperking-800.webp 800w, ../img/projects/intro/bangvoorbeperking-1200.webp 1200w"
+                        sizes="(max-width: 600px) 100vw, (max-width: 1024px) 100vw, 100vw"
+                        alt="Bang voor beperking. Een puber met het syndroom van Down staat op de speelplaats. Explore"
+                        loading="lazy"
+                    />
+                </picture>
             </div>
             <iframe
                 class="project__video"
