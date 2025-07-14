@@ -29,13 +29,6 @@
         font-variation-settings: "wdth" <width>;
     }
 
-    /* Stylistic Sets */
-    .stylset {
-        -moz-font-feature-settings: 'ss01', 'ss02', 'ss03', 'ss07';
-        -webkit-font-feature-settings: 'ss01', 'ss02', 'ss03', 'ss07';
-        font-feature-settings: 'ss01', 'ss02', 'ss03', 'ss07';
-    }
-
     /* Sizes */
     --font-size-small: clamp(0.75rem, 0.7rem + 0.25vw, 0.875rem); /* 12px to 14px */
     --font-size-base: clamp(0.875rem, 0.8rem + 0.5vw, 1rem); /* 14px to 16px */

@@ -59,10 +59,6 @@
     right: 8%;
 }
 
-.audio-description-box--mobile {
-    display: none;
-}
-
 .audio-description-header {
     font-size: 1rem;
     font-weight: 600;
@@ -95,3 +91,5 @@
 .hover-audio-player::-webkit-media-controls-enclosure {
     border-radius: 6px;
 }
+
+/* TODO: Extract shared button styles into a .btn class for DRYness */

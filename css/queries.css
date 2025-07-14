@@ -238,6 +238,10 @@
         flex-direction: column;
     }
 
+    .projects__slide a::before {
+        opacity: 1;
+    }
+
     .projects__title {
         font-size: clamp(0.8rem, 1vw + 0.5rem, 2rem);
     }
