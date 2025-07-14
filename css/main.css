@@ -354,6 +354,7 @@
     aspect-ratio: 16/9;
     overflow: hidden;
     cursor: pointer;
+    background-color: var(--color-dark-grey);
 }
 
 .projects__slide a {

@@ -303,6 +303,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
         // Carousel functionality
         setupCarousel: function () {
+            // Initialize carousel
             const carousel = document.querySelector('.carousel__container');
             if (!carousel) return;
 

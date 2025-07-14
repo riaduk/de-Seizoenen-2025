@@ -55,32 +55,28 @@
         </nav>
 
         <!-- About -->
-        <header class="about__header hover-audio-target" aria-label="Header met videoreporter Luk Dewulf" data-audio-id="about-header">
-            <div class="audio-description-box audio-description-box--right" role="region" aria-label="Audiodescriptie over ons">
+        <header class="about__header hover-audio-target" aria-label="Header met videoreporter Luk Dewulf">
+            <div class="audio-description-box audio-description-box--right" role="banner" tabindex="0" aria-label="Audiodescriptie over ons">
                 <h4 class="audio-description-header">Geniet nu van audiodescriptie</h4>
-                <audio class="hover-audio-player" src="audio/About/over ons.mp3" controls aria-labelledby="carousel-audio-desc-label"></audio>
+                <audio class="hover-audio-player" src="audio/About/over ons.mp3" controls></audio>
             </div>
-            <div class="audio-description-box--mobile"></div>
             <picture>
-                <source srcset="img/about/mobile/header-800.webp" media="(max-width: 600px)">
-                <source srcset="img/about/header-400.webp 400w, img/about/header-800.webp 800w, img/about/header-1200.webp 1200w" media="(min-width: 601px)">
+                <source srcset="img/about/mobile/header-800.webp" media="(max-width: 600px)" />
+                <source srcset="img/about/header-400.webp 400w, img/about/header-800.webp 800w, img/about/header-1200.webp 1200w" media="(min-width: 601px)" />
                 <img
                     class="about__header__img"
                     src="img/about/header-800.webp"
                     srcset="img/about/header-400.webp 400w, img/about/header-800.webp 800w, img/about/header-1200.webp 1200w"
                     sizes="(max-width: 600px) 100vw, (max-width: 1024px) 100vw, 100vw"
-                    alt="Een foto van videoreporter Luk Dewulf die met zijn camera een beeld schiet van 2 meisjes die, in een volle zaal, aandachtig naar een smartphone kijken." loading="lazy"
+                    alt="Een foto van videoreporter Luk Dewulf die met zijn camera een beeld schiet van 2 meisjes die, in een volle zaal, aandachtig naar een smartphone kijken."
+                    loading="lazy"
                 />
             </picture>
             <h2 class="about__header__title">Over ons</h2>
         </header>
 
-        <main id="main-content" class="about__main hover-audio-target" aria-current="true" tabindex="0" role="main" data-audio-id="about-main-over-ons">
-            <div class="audio-description-box audio-description-box--right" role="region" aria-label="Audiodescriptie over ons">
-                <h4 class="audio-description-header"">Geniet nu van audiodescriptie</h4>
-                <audio class="hover-audio-player" src="audio/About/inclusie is.mp3" controls aria-labelledby="carousel-audio-desc-label"></audio>
-            </div>
-            <div class="about__main__intro">
+        <main id="main-content" class="about__main" role="main">
+            <div class="about__main__intro hover-audio-target" aria-current="true" tabindex="0">
                 <h1 class="about__main__title" aria-label="ONS DNA">
                     <span>O</span>
                     <span>N</span>
@@ -92,16 +88,18 @@
                     <span>N</span>
                     <span>A</span>
                 </h1>
-                <div class="audio-description-box--mobile"></div>
-            </div>
-            <div class="about__main__content hover-audio-target" aria-current="true" tabindex="0" data-audio-id="about-main-de-seizoenen">
-                <div class="audio-description-box audio-description-box--right" role="region" aria-label="Audiodescriptie de Seizoenen">
+                <div class="audio-description-box audio-description-box--about" role="region" aria-label="Audiodescriptie over ons">
                     <h4 class="audio-description-header">Geniet nu van audiodescriptie</h4>
-                    <audio class="hover-audio-player" src="audio/About/nothing about.mp3" controls aria-labelledby="carousel-audio-desc-label"></audio>
+                    <audio class="hover-audio-player" src="audio/About/inclusie is.mp3" controls></audio>
                 </div>
+            </div>
+            <div class="about__main__content hover-audio-target" aria-current="true" tabindex="0">
                 <h6 class="about__main__subtitle">Nothing about us without us</h6>
                 <p class="about__main__text">Daarom staat bij ons de persoon met een beperking centraal in onze video's. De videocampagnes zijn creatieve producten die de band tussen mensen met en zonder beperking versterken. We zitten graag rond de tafel zodat uw boodschap zoveel mogelijk mensen bereikt.</p>
-                <div class="audio-description-box--mobile"></div>
+                <div class="audio-description-box audio-description-box--about" role="region" aria-label="Audiodescriptie de Seizoenen">
+                    <h4 class="audio-description-header">Geniet nu van audiodescriptie</h4>
+                    <audio class="hover-audio-player" src="audio/About/nothing about.mp3" controls></audio>
+                </div>
                 <div class="about__main__video-container">
                     <iframe
                         class="about__main__video"

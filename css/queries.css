@@ -54,36 +54,59 @@
     }
 
     .audio-description-box {
-        position: relative;
         text-align: center;
+        position: static;
+        margin-bottom: 1rem;
+        z-index: 1;
+        overflow: visible;
     }
 
-    .audio-description-box--mobile {
+    /* Only show audio box on hover when enabled */
+    .hover-audio-enabled:hover .audio-description-box {
         display: flex;
+    }
+
+    .audio--blackbackground {
+        background-color: var(--color-black);
+        padding-bottom: 1.5rem;
+    }
+
+    .audio-description-box--top {
+        left: 0;
+        right: 0;
+        margin-top: 1rem;
+        margin-left: auto;
+        margin-right: auto;
+        width: 90%;
+    }
+
+    .audio-description-box--right {
+        position: absolute;
+        top: 6.5rem;
+        left: 0;
+        right: 0;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .audio-description-box--left {
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .audio-description-box--carousel {
+        top: 0;
+        left: 0;
+    }
+
+    .audio-description-box--about {
+        top: 0;
+        right: 0;
     }
 
     /* Exception: always place the mobile audio box at the bottom of the header */
     header.about__header {
         position: relative;
-    }
-    header.about__header > .audio-description-box--mobile {
-        position: absolute;
-        left: 0;
-        right: 0;
-        bottom: 5rem;
-        width: 100%;
-        margin-left: auto;
-        margin-right: auto;
-        justify-content: center;
-        align-items: center;
-        z-index: 2;
-    }
-
-    .projects__title + .audio-description-box--mobile {
-        justify-content: center;
-        align-items: center;
-        background-color: var(--color-black);
-        padding-bottom: 1.5rem;
     }
 
     .audio-description-header {
@@ -99,8 +122,7 @@
     }
 
     .hover-audio-player--mini {
-        width: auto;
-        height: 2rem;
+        width: 100%;
     }
 
     /* Carousel Section */
@@ -207,6 +229,13 @@
 
     .projects__container {
         padding: 0 1rem;
+    }
+
+    .projects__slide {
+        overflow: visible;
+        aspect-ratio: auto;
+        display: flex;
+        flex-direction: column;
     }
 
     .projects__title {

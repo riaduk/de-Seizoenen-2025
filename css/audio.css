@@ -16,7 +16,6 @@
     justify-content: center;
     align-items: center;
     z-index: 9998;
-    margin: 0;
     pointer-events: auto;
 }
 
@@ -44,6 +43,20 @@
 .audio-description-box--left {
     top: 1rem;
     left: 1rem;
+}
+
+.audio-description-box--carousel {
+    top: -8rem;
+}
+
+.audio-description-box--project {
+    top: -8rem;
+    left: 8rem;
+}
+
+.audio-description-box--about {
+    top: 1rem;
+    right: 8%;
 }
 
 .audio-description-box--mobile {
@@ -75,15 +88,10 @@
 }
 
 .hover-audio-player--mini {
-    width: 11rem;
+    width: 10rem;
+    height: 2rem;
 }
 
 .hover-audio-player::-webkit-media-controls-enclosure {
     border-radius: 6px;
 }
-/*
-.hover-audio-player__topleft {
-    left: 50%;
-    top: 4rem;
-    transform: translateX(-50%);
-}*/
